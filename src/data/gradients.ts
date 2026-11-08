@@ -156,3 +156,4 @@ export const GRADIENTS_DATA: GradientItem[] = [
     description: 'Pure stealth aesthetics with matte carbon textures and subtle film decay.'
   }
 ];
+

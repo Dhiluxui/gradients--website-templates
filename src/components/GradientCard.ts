@@ -97,3 +97,4 @@ export function createGradientCardElement(item: GradientItem): HTMLElement {
 
   return card;
 }
+

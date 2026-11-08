@@ -58,3 +58,4 @@ export const ${title.replace(/[^a-zA-Z0-9]/g, '')}Gradient: React.FC<{ className
   );
 };`;
 }
+

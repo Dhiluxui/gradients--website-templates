@@ -87,3 +87,4 @@ export function initCollectionsPage(defaultCategory: string = 'all'): void {
 
   renderGrid();
 }
+

@@ -54,3 +54,4 @@ export function showToast(message: string, duration = 2500): void {
     }, 250);
   }, duration);
 }
+

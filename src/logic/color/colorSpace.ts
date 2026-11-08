@@ -117,3 +117,4 @@ export function lerpColor(hexA: string, hexB: string, tInput: number): string {
 
   return rgbToHex(r, g, b);
 }
+

@@ -60,3 +60,4 @@ export function applyGrainToImageData(
     // Alpha is preserved
   }
 }
+

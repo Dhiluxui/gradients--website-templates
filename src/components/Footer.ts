@@ -88,3 +88,4 @@ export function renderFooter(): string {
     </style>
   `;
 }
+

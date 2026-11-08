@@ -143,3 +143,4 @@ export function openGradientModal(item: GradientItem): void {
     showToast('CSS Gradient copied!');
   });
 }
+

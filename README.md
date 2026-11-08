@@ -104,3 +104,4 @@ grainient-app/
         ├── tokens.css          # Phase 1 design tokens (<260 lines)
         └── global.css          # Reset, auto-layout flex/grid (<120 lines)
 ```
+
