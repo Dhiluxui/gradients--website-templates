@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abstract Animated Gradients &bull; Grainient</title>
+  <link rel="icon" type="image/svg+xml" href="/public/favicon.svg" />
+  <link rel="stylesheet" href="/src/styles/tokens.css" />
+  <link rel="stylesheet" href="/src/styles/global.css" />
+</head>
+<body>
+  <div id="navbar-root"></div>
+
+  <!-- Header -->
+  <section style="padding: 4rem 0 2rem; border-bottom: 1px solid var(--border-subtle); background: var(--bg-secondary);">
+    <div class="container">
+      <div style="max-width: 680px;">
+        <span class="badge-pill">COLLECTION &bull; 90 ANIMATED LOOPS</span>
+        <h1 class="text-h2" style="margin: 0.75rem 0 0.5rem;">Abstract Animated Gradients</h1>
+        <p class="text-p-lead">
+          Kinetic, living gradients engineered for modern interactive websites. High-framerate fluid simulations and WebGL motion backgrounds.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Canvas Interactive Studio Showcase -->
+  <section style="padding: 3rem 0;">
+    <div class="container">
+      <div style="margin-bottom: 1.5rem;">
+        <h2 class="text-h4">Interactive Live Canvas Loop</h2>
+        <p class="text-p-sm">Rendered client-side using mathematical harmonic wave functions with Delta Time.</p>
+      </div>
+      <div id="shader-studio-root"></div>
+    </div>
+  </section>
+
+  <!-- Animated Cards Grid -->
+  <main style="padding: 2rem 0 6rem; border-top: 1px solid var(--border-subtle);">
+    <div class="container">
+      <div style="margin-bottom: 2rem;">
+        <h2 class="text-h3">Animated Loop Library</h2>
+        <p class="text-p-sm">Select an animated asset to copy its CSS keyframes, React component, or WebGL shader.</p>
+      </div>
+      <div id="collections-grid" class="grid-cards"></div>
+    </div>
+  </main>
+
+  <div id="footer-root"></div>
+
+  <script type="module">
+    import { initCollectionsPage } from './src/pages/collectionsPage.ts';
+    import { initShaderStudio } from './src/components/ShaderStudio.ts';
+
+    initCollectionsPage('animated');
+    initShaderStudio('shader-studio-root');
+  </script>
+</body>
+</html>

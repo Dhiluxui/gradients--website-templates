@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grainient | FAQ &amp; Licensing</title>
+  <link rel="icon" type="image/svg+xml" href="/public/favicon.svg" />
+  <link rel="stylesheet" href="/src/styles/tokens.css" />
+  <link rel="stylesheet" href="/src/styles/global.css" />
+</head>
+<body>
+  <div id="navbar-root"></div>
+
+  <main style="padding: 4.5rem 0 6rem; flex: 1;">
+    <div class="container" style="max-width: 780px;">
+      <div style="text-align: center; margin-bottom: 3rem;">
+        <span class="badge-pill">HELP &bull; DOCUMENTATION</span>
+        <h1 class="text-h2" style="margin: 0.75rem 0 0.5rem;">Frequently Asked Questions</h1>
+        <p class="text-p-lead">
+          Find answers about asset formats, commercial licensing, the shader engine, and billing.
+        </p>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 1rem;">
+        <div class="card-glass" style="padding: 1.75rem;">
+          <h3 class="text-h5" style="margin: 0 0 0.75rem; color: #fff;">What is Grainient?</h3>
+          <p class="text-p-body">
+            Grainient is an elite digital asset platform and shader engine designed for web developers, creative agencies, and UI/UX designers. It delivers over 1,000+ noisy gradients, smooth mesh blends, animated background loops, and a real-time in-browser shader synthesis tool.
+          </p>
+        </div>
+
+        <div class="card-glass" style="padding: 1.75rem;">
+          <h3 class="text-h5" style="margin: 0 0 0.75rem; color: #fff;">Are client projects covered under the license?</h3>
+          <p class="text-p-body">
+            Yes. Both the Pro Pass and Studio tiers come with a 100% royalty-free, perpetual commercial license. You can use any gradient, wallpaper, or synthesized shader in unlimited commercial client projects, SaaS products, mobile apps, and marketing materials.
+          </p>
+        </div>
+
+        <div class="card-glass" style="padding: 1.75rem;">
+          <h3 class="text-h5" style="margin: 0 0 0.75rem; color: #fff;">How do I copy gradients into my codebase?</h3>
+          <p class="text-p-body">
+            Simply click on any gradient in the gallery to open the Inspector Modal. You can copy clean standard CSS syntax (`background-image: radial-gradient(...)`), Tailwind CSS arbitrary utility classes, SVG filter data URLs, or a ready-to-paste React JSX component.
+          </p>
+        </div>
+
+        <div class="card-glass" style="padding: 1.75rem;">
+          <h3 class="text-h5" style="margin: 0 0 0.75rem; color: #fff;">Do I need WebGL experience to use the Shader Tool?</h3>
+          <p class="text-p-body">
+            Not at all. The Grainient Shader Tool runs mathematical wave harmonics client-side with a modern visual UI. You tweak color stops, speed, turbulence, and film grain with sliders, and the tool compiles the code for you in real time.
+          </p>
+        </div>
+
+        <div class="card-glass" style="padding: 1.75rem;">
+          <h3 class="text-h5" style="margin: 0 0 0.75rem; color: #fff;">How often are new gradients released?</h3>
+          <p class="text-p-body">
+            We drop new curated gradient packs and shader presets on a monthly basis. All Pro Pass and Studio users receive all future drops automatically for life at no extra charge.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-root"></div>
+
+  <script type="module">
+    import { renderNavbar, initNavbarInteractions } from './src/components/Navbar.ts';
+    import { renderFooter } from './src/components/Footer.ts';
+
+    document.getElementById('navbar-root').innerHTML = renderNavbar('faq');
+    document.getElementById('footer-root').innerHTML = renderFooter();
+    initNavbarInteractions();
+  </script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grainient | Pricing - Infinite Gradients, Unlimited Access</title>
+  <link rel="icon" type="image/svg+xml" href="/public/favicon.svg" />
+  <link rel="stylesheet" href="/src/styles/tokens.css" />
+  <link rel="stylesheet" href="/src/styles/global.css" />
+</head>
+<body>
+  <div id="navbar-root"></div>
+
+  <!-- Pricing Header -->
+  <section style="padding: 4.5rem 0 3rem; text-align: center; background: var(--bg-secondary); border-bottom: 1px solid var(--border-subtle);">
+    <div class="container" style="max-width: 680px;">
+      <span class="badge-pill">SIMPLE &bull; TRANSPARENT</span>
+      <h1 class="text-h1" style="margin: 0.75rem 0 1rem;">Infinite Gradients, Unlimited Access!</h1>
+      <p class="text-p-lead">
+        Choose a flexible monthly subscription or unlock lifetime access with a single payment. All plans include 100% royalty-free commercial licenses.
+      </p>
+    </div>
+  </section>
+
+  <!-- Pricing Cards Grid -->
+  <main style="padding: 4.5rem 0 6rem;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1100px; margin: 0 auto;">
+        
+        <!-- Starter Plan -->
+        <div class="card-glass" style="padding: 2.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <span class="badge-tag">Freebie Starter</span>
+            <div style="display: flex; align-items: baseline; gap: 0.25rem; margin: 1.25rem 0;">
+              <span class="text-h2" style="margin: 0;">$0</span>
+              <span class="text-p-sm">/ forever</span>
+            </div>
+            <p class="text-p-sm">Curated trial collection for personal projects and student portfolios.</p>
+            <hr style="border: none; border-top: 1px solid var(--border-subtle); margin: 1.5rem 0;" />
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.85rem;" class="text-p-sm">
+              <li>&check; 30 High-Resolution Gradients</li>
+              <li>&check; Raw CSS Gradient Code</li>
+              <li>&check; Personal Non-Commercial Use</li>
+              <li style="color: var(--text-muted);">&cross; Real-Time Shader Generator</li>
+              <li style="color: var(--text-muted);">&cross; Commercial License</li>
+              <li style="color: var(--text-muted);">&cross; 8K / 12K Ultra HD Downloads</li>
+            </ul>
+          </div>
+          <a href="/collections.html" class="btn btn-secondary btn-md" style="width: 100%; margin-top: 2rem;">Explore Freebies</a>
+        </div>
+
+        <!-- Pro Pass (Best Value) -->
+        <div class="card-glass" style="padding: 2.25rem; display: flex; flex-direction: column; justify-content: space-between; border-color: var(--color-brand-primary); box-shadow: var(--shadow-brand); position: relative;">
+          <div style="position: absolute; top: -14px; right: 2rem;">
+            <span class="badge-pill" style="background: var(--color-brand-primary); color: #000; font-weight: 700; padding: 0.25rem 0.75rem;">MOST POPULAR</span>
+          </div>
+          <div>
+            <span class="badge-tag">Lifetime Pro Access</span>
+            <div style="display: flex; align-items: baseline; gap: 0.25rem; margin: 1.25rem 0;">
+              <span class="text-h2" style="margin: 0; color: var(--color-brand-primary);">$59</span>
+              <span class="text-p-sm">/ one-time payment</span>
+            </div>
+            <p class="text-p-sm">Everything in Grainient unlocked forever with zero monthly charges.</p>
+            <hr style="border: none; border-top: 1px solid var(--border-subtle); margin: 1.5rem 0;" />
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.85rem;" class="text-p-sm">
+              <li>&check; Full 1,000+ Gradient &amp; Background Vault</li>
+              <li>&check; Full Grainient Shader Tool Pro Editor</li>
+              <li>&check; Unlimited Commercial Client License</li>
+              <li>&check; 4K, 8K &amp; 12K Uncompressed Downloads</li>
+              <li>&check; High-FPS Video Loops (MP4 / WebM)</li>
+              <li>&check; Lifetime Free Drops &amp; Updates</li>
+            </ul>
+          </div>
+          <button id="buy-pro-btn" class="btn btn-primary btn-md" style="width: 100%; margin-top: 2rem;">Get Lifetime Pro &bull; $59</button>
+        </div>
+
+        <!-- Studio & Agency -->
+        <div class="card-glass" style="padding: 2.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <span class="badge-tag">Studio &amp; Agency</span>
+            <div style="display: flex; align-items: baseline; gap: 0.25rem; margin: 1.25rem 0;">
+              <span class="text-h2" style="margin: 0;">$299</span>
+              <span class="text-p-sm">/ lifetime team</span>
+            </div>
+            <p class="text-p-sm">For creative agencies, studios, and distributed product design teams.</p>
+            <hr style="border: none; border-top: 1px solid var(--border-subtle); margin: 1.5rem 0;" />
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.85rem;" class="text-p-sm">
+              <li>&check; Up to 10 Designer &amp; Dev Seats</li>
+              <li>&check; Raw Vector Sources &amp; GLSL Shaders</li>
+              <li>&check; Priority Custom Pack Requests</li>
+              <li>&check; Unlimited Commercial SaaS &amp; Client Use</li>
+              <li>&check; Dedicated Support &amp; Slack Channel</li>
+            </ul>
+          </div>
+          <button id="buy-team-btn" class="btn btn-secondary btn-md" style="width: 100%; margin-top: 2rem;">Get Studio Pass &bull; $299</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-root"></div>
+
+  <script type="module">
+    import { renderNavbar, initNavbarInteractions } from './src/components/Navbar.ts';
+    import { renderFooter } from './src/components/Footer.ts';
+    import { showToast } from './src/components/Toast.ts';
+
+    document.getElementById('navbar-root').innerHTML = renderNavbar('pricing');
+    document.getElementById('footer-root').innerHTML = renderFooter();
+    initNavbarInteractions();
+
+    document.getElementById('buy-pro-btn')?.addEventListener('click', () => {
+      showToast('Redirecting to checkout for Pro Pass...');
+    });
+    document.getElementById('buy-team-btn')?.addEventListener('click', () => {
+      showToast('Redirecting to checkout for Studio Pass...');
+    });
+  </script>
+</body>
+</html>

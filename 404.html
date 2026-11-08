@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 - Page Not Found | Grainient</title>
+  <link rel="icon" type="image/svg+xml" href="/public/favicon.svg" />
+  <link rel="stylesheet" href="/src/styles/tokens.css" />
+  <link rel="stylesheet" href="/src/styles/global.css" />
+</head>
+<body>
+  <div id="navbar-root"></div>
+
+  <main style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 4rem 1.5rem; text-align: center;">
+    <div class="container" style="max-width: 600px; display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
+      <span class="badge-pill">404 ERROR</span>
+      <h1 class="text-h1" style="font-size: clamp(3rem, 8vw, 6rem); line-height: 1; color: var(--color-brand-primary);">
+        404
+      </h1>
+      <h2 class="text-h3">Gradient Coordinates Lost in Noise</h2>
+      <p class="text-p-lead" style="max-width: 460px;">
+        The background frequency or gradient asset you are looking for has been moved, dissolved into the ether, or does not exist.
+      </p>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 1rem;">
+        <a href="/" class="btn btn-primary btn-md">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+          <span>Return to Safety</span>
+        </a>
+        <a href="/collections.html" class="btn btn-secondary btn-md">
+          <span>Explore All Collections</span>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-root"></div>
+
+  <script type="module">
+    import { renderNavbar, initNavbarInteractions } from './src/components/Navbar.ts';
+    import { renderFooter } from './src/components/Footer.ts';
+
+    document.getElementById('navbar-root').innerHTML = renderNavbar('404');
+    document.getElementById('footer-root').innerHTML = renderFooter();
+    initNavbarInteractions();
+  </script>
+</body>
+</html>

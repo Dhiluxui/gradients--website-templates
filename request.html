@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grainient | Request Custom Gradient Pack</title>
+  <link rel="icon" type="image/svg+xml" href="/public/favicon.svg" />
+  <link rel="stylesheet" href="/src/styles/tokens.css" />
+  <link rel="stylesheet" href="/src/styles/global.css" />
+</head>
+<body>
+  <div id="navbar-root"></div>
+
+  <main style="padding: 4.5rem 0 6rem; flex: 1;">
+    <div class="container" style="max-width: 640px;">
+      <div style="text-align: center; margin-bottom: 2.5rem;">
+        <span class="badge-pill">CREATIVE REQUESTS</span>
+        <h1 class="text-h2" style="margin: 0.75rem 0 0.5rem;">Request a Custom Gradient</h1>
+        <p class="text-p-lead">
+          Looking for a specific color palette, brand aesthetic, or bespoke motion shader? Submit your requirements and our design team will synthesize it in the next update drop.
+        </p>
+      </div>
+
+      <div class="card-glass" style="padding: 2.25rem;">
+        <form id="request-form" style="display: flex; flex-direction: column; gap: 1.25rem;">
+          <div>
+            <label class="text-p-caption" style="display: block; margin-bottom: 0.35rem; text-transform: uppercase;">Your Name</label>
+            <input type="text" required placeholder="Alex Rivera" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-md); background: var(--bg-primary); border: 1px solid var(--border-subtle); color: #fff; font-size: 0.9rem;" />
+          </div>
+
+          <div>
+            <label class="text-p-caption" style="display: block; margin-bottom: 0.35rem; text-transform: uppercase;">Email Address</label>
+            <input type="email" required placeholder="alex@studio.design" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-md); background: var(--bg-primary); border: 1px solid var(--border-subtle); color: #fff; font-size: 0.9rem;" />
+          </div>
+
+          <div>
+            <label class="text-p-caption" style="display: block; margin-bottom: 0.35rem; text-transform: uppercase;">Target Style / Category</label>
+            <select style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-md); background: var(--bg-primary); border: 1px solid var(--border-subtle); color: #fff; font-size: 0.9rem;">
+              <option value="noisy-grainy">Noisy / Grainy Gradients</option>
+              <option value="smooth-blend">Smooth Blend Mesh</option>
+              <option value="animated">Abstract Animated Loop</option>
+              <option value="ai-generated">AI Generative Wallpaper</option>
+              <option value="shader">Custom Shader Preset</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="text-p-caption" style="display: block; margin-bottom: 0.35rem; text-transform: uppercase;">Color Palette / Mood Description</label>
+            <textarea rows="4" required placeholder="e.g. Electric cyberpunk neon with deep obsidian blacks and a vibrant lime green glow, heavy retro film grain..." style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-md); background: var(--bg-primary); border: 1px solid var(--border-subtle); color: #fff; font-size: 0.9rem; resize: vertical;"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-md" style="margin-top: 0.5rem; width: 100%;">
+            <span>Submit Gradient Request</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-root"></div>
+
+  <script type="module">
+    import { renderNavbar, initNavbarInteractions } from './src/components/Navbar.ts';
+    import { renderFooter } from './src/components/Footer.ts';
+    import { showToast } from './src/components/Toast.ts';
+
+    document.getElementById('navbar-root').innerHTML = renderNavbar('request');
+    document.getElementById('footer-root').innerHTML = renderFooter();
+    initNavbarInteractions();
+
+    document.getElementById('request-form')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      showToast('Thank you! Your custom gradient request has been logged.');
+      (e.target).reset();
+    });
+  </script>
+</body>
+</html>

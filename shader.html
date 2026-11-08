@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grainient.supply | Shader Editor - Real-Time Gradient Generator</title>
+  <meta name="description" content="Create, customize, and embed real-time shader gradients for your web design projects. Real-time GLSL canvas rendering." />
+  <link rel="icon" type="image/svg+xml" href="/public/favicon.svg" />
+  <link rel="stylesheet" href="/src/styles/tokens.css" />
+  <link rel="stylesheet" href="/src/styles/global.css" />
+</head>
+<body>
+  <div id="navbar-root"></div>
+
+  <!-- Header Banner -->
+  <section style="padding: 2.5rem 0 1.5rem; background: var(--bg-secondary); border-bottom: 1px solid var(--border-subtle);">
+    <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem;">
+      <div>
+        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem;">
+          <span class="badge-pill">STUDIO ENGINE v2.0</span>
+          <span class="text-p-caption">60 FPS Independent Delta Time</span>
+        </div>
+        <h1 class="text-h3" style="margin: 0;">Real-Time Shader Editor</h1>
+      </div>
+
+      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <button id="randomize-btn" class="btn btn-secondary btn-sm">Randomize</button>
+        <button id="download-png-btn" class="btn btn-secondary btn-sm">Download PNG</button>
+        <button id="copy-css-btn" class="btn btn-primary btn-sm">Copy CSS Code</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Workspace -->
+  <main style="flex: 1; padding: 2rem 0 5rem;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr; lg:grid-template-columns: 2fr 1fr; gap: 2rem; align-items: start;">
+        
+        <!-- Canvas Viewer -->
+        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+          <div class="card-glass" style="position: relative; width: 100%; height: 500px; border-radius: var(--radius-xl); overflow: hidden; background: #000; box-shadow: var(--shadow-lg);">
+            <canvas id="main-shader-canvas" width="800" height="500" style="width: 100%; height: 100%; display: block;"></canvas>
+            <div class="noise-overlay" style="opacity: 0.35;"></div>
+            
+            <div style="position: absolute; bottom: 1rem; left: 1rem;">
+              <span class="badge-tag" style="background: rgba(0,0,0,0.7); backdrop-filter: blur(8px); color: #fff;">
+                Canvas 2D Wave Harmonics (Pure Math)
+              </span>
+            </div>
+          </div>
+
+          <!-- Code Outputs Panel -->
+          <div class="card-glass" style="padding: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span class="text-h6">Generated Production Code</span>
+              <div style="display: flex; gap: 0.5rem;">
+                <button id="copy-tw-btn" class="btn btn-secondary btn-sm" style="font-size: 0.75rem;">Tailwind</button>
+                <button id="copy-react-btn" class="btn btn-secondary btn-sm" style="font-size: 0.75rem;">React JSX</button>
+              </div>
+            </div>
+            <pre id="shader-code-output" style="background: var(--bg-primary); padding: 1rem; border-radius: var(--radius-md); font-family: monospace; font-size: 0.85rem; color: #a1a1aa; overflow-x: auto; margin: 0;"></pre>
+          </div>
+        </div>
+
+        <!-- Parameters Sidebar -->
+        <div class="card-glass" style="padding: 1.75rem; display: flex; flex-direction: column; gap: 1.5rem;">
+          <h2 class="text-h5" style="margin: 0;">Harmonics &amp; Colors</h2>
+
+          <!-- 4 Color Nodes -->
+          <div>
+            <label class="text-p-caption" style="display: block; margin-bottom: 0.5rem; text-transform: uppercase;">4-Node Color Stops</label>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem;">
+              <div>
+                <span class="text-p-caption">Stop 1 (Base)</span>
+                <input type="color" id="sc-1" value="#09090b" style="width: 100%; height: 40px; border: none; border-radius: var(--radius-sm); cursor: pointer;" />
+              </div>
+              <div>
+                <span class="text-p-caption">Stop 2 (Accent)</span>
+                <input type="color" id="sc-2" value="#c2f13c" style="width: 100%; height: 40px; border: none; border-radius: var(--radius-sm); cursor: pointer;" />
+              </div>
+              <div>
+                <span class="text-p-caption">Stop 3 (Mesh)</span>
+                <input type="color" id="sc-3" value="#059669" style="width: 100%; height: 40px; border: none; border-radius: var(--radius-sm); cursor: pointer;" />
+              </div>
+              <div>
+                <span class="text-p-caption">Stop 4 (Vortex)</span>
+                <input type="color" id="sc-4" value="#1e1b4b" style="width: 100%; height: 40px; border: none; border-radius: var(--radius-sm); cursor: pointer;" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Simulation Sliders -->
+          <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+            <div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 0.35rem;">
+                <span class="text-p-caption">Motion Speed</span>
+                <span class="text-mono" style="font-size: 0.75rem;">0.1x &mdash; 3.0x</span>
+              </div>
+              <input type="range" id="sc-speed" min="0.1" max="3.0" step="0.1" value="1.0" style="width: 100%; accent-color: var(--color-brand-primary);" />
+            </div>
+
+            <div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 0.35rem;">
+                <span class="text-p-caption">Turbulence &amp; Distortion</span>
+                <span class="text-mono" style="font-size: 0.75rem;">0.1 &mdash; 2.5</span>
+              </div>
+              <input type="range" id="sc-turb" min="0.1" max="2.5" step="0.1" value="1.0" style="width: 100%; accent-color: var(--color-brand-primary);" />
+            </div>
+
+            <div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 0.35rem;">
+                <span class="text-p-caption">Analogue Film Grain</span>
+                <span class="text-mono" style="font-size: 0.75rem;">0% &mdash; 100%</span>
+              </div>
+              <input type="range" id="sc-grain" min="0" max="100" step="5" value="30" style="width: 100%; accent-color: var(--color-brand-primary);" />
+            </div>
+          </div>
+
+          <div style="border-top: 1px solid var(--border-subtle); padding-top: 1rem;">
+            <p class="text-p-sm" style="color: var(--text-muted);">
+              Export standard CSS for immediate paste into your Tailwind, Framer, Figma, or Next.js codebases.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-root"></div>
+
+  <script type="module">
+    import { initDedicatedShaderPage } from './src/pages/shaderPage.ts';
+    initDedicatedShaderPage();
+  </script>
+</body>
+</html>

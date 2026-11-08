@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grainient | Unlimited Gradients, Animated Gradients &amp; AI Backgrounds</title>
+  <meta name="description" content="Grainient offers 1,000+ awesome gradients, animated backgrounds, grainy textures, and a real-time shader generator for modern web designers." />
+  <link rel="icon" type="image/svg+xml" href="/public/favicon.svg" />
+  <link rel="stylesheet" href="/src/styles/tokens.css" />
+  <link rel="stylesheet" href="/src/styles/global.css" />
+</head>
+<body>
+  <!-- Header / Nav -->
+  <div id="navbar-root"></div>
+
+  <!-- Announcement Bar -->
+  <aside style="border-bottom: 1px solid var(--border-subtle); background: rgba(194, 241, 60, 0.05); padding: 0.5rem 1rem; text-align: center;">
+    <div class="container" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; flex-wrap: wrap;">
+      <span class="badge-pill" style="font-size: 0.7rem; padding: 0.1rem 0.5rem;">WHAT'S NEW</span>
+      <span class="text-p-caption" style="color: var(--text-primary); font-weight: 500;">
+        Introducing Grainient v2: Gradients, Animated Backgrounds, and a Real-Time Shader Tool
+      </span>
+      <a href="/shader.html" style="color: var(--color-brand-primary); font-size: 0.75rem; font-weight: 600; text-decoration: underline; margin-left: 0.25rem;">
+        Launch Shader &rarr;
+      </a>
+    </div>
+  </aside>
+
+  <!-- Hero Section -->
+  <section style="padding: clamp(3rem, 7vw, 6.5rem) 0 4rem; position: relative;">
+    <div class="container" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1.5rem;">
+      <div class="badge-pill animate-fade-in">
+        <span>CURATED GRADIENTS &bull; SHADER TOOL &bull; 8K ASSETS</span>
+      </div>
+
+      <h1 class="text-h1 animate-fade-in" style="max-width: 960px;">
+        Discover the Best Gradients on the Internet.
+      </h1>
+
+      <p class="text-p-lead animate-fade-in" style="max-width: 680px;">
+        Gradients designed to convert, impress, and amaze. Over 1,000+ ready-to-use smooth blends, noisy textures, animated loops, and real-time custom shader tools for Figma, Framer, and web code.
+      </p>
+
+      <div class="animate-fade-in" style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 0.5rem;">
+        <a href="/collections.html" class="btn btn-primary btn-lg">
+          <span>Explore All 1,000+ Assets</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+        <a href="/shader.html" class="btn btn-secondary btn-lg">
+          <span>Try Grainient Shader</span>
+        </a>
+      </div>
+
+      <!-- Feature Pill Badges -->
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin-top: 2rem; color: var(--text-muted); font-size: 0.85rem;">
+        <span style="display: flex; align-items: center; gap: 0.4rem;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand-primary)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          1,000+ Curated Gradients
+        </span>
+        <span style="display: flex; align-items: center; gap: 0.4rem;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand-primary)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          Real-Time WebGL Shader Engine
+        </span>
+        <span style="display: flex; align-items: center; gap: 0.4rem;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-brand-primary)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          Unlimited Commercial License
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 Main Showcase Categories Grid -->
+  <section style="padding: 2rem 0 5rem;">
+    <div class="container">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2rem;">
+        <div>
+          <span class="text-h6" style="color: var(--color-brand-primary);">VISUAL ENGINE</span>
+          <h2 class="text-h2">More than Gradients, A Complete Visual Engine</h2>
+        </div>
+        <a href="/collections.html" class="btn btn-tertiary btn-sm">See all &rarr;</a>
+      </div>
+
+      <div class="grid-showcase">
+        <!-- 1. Noisy / Grainy -->
+        <a href="/noisy-grainy.html" class="card-glass" style="text-decoration: none; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 280px; background: linear-gradient(145deg, rgba(20,20,24,0.9), rgba(10,10,14,0.95));">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+            <span class="badge-tag">387 Gradients</span>
+            <div style="width: 14px; height: 14px; border-radius: 50%; background: #c2f13c;"></div>
+          </div>
+          <div>
+            <h3 class="text-h4" style="color: #fff; margin-bottom: 0.5rem;">Noisy / Grainy Gradients</h3>
+            <p class="text-p-sm">Textured retro analog grain with multi-stop harmonic color diffusion.</p>
+          </div>
+        </a>
+
+        <!-- 2. Smooth Blend -->
+        <a href="/smooth-blend.html" class="card-glass" style="text-decoration: none; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 280px; background: linear-gradient(145deg, rgba(20,20,24,0.9), rgba(10,10,14,0.95));">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+            <span class="badge-tag">466 Gradients</span>
+            <div style="width: 14px; height: 14px; border-radius: 50%; background: #38bdf8;"></div>
+          </div>
+          <div>
+            <h3 class="text-h4" style="color: #fff; margin-bottom: 0.5rem;">Smooth Blend Gradients</h3>
+            <p class="text-p-sm">Silky smooth mesh blends engineered for seamless digital hero designs.</p>
+          </div>
+        </a>
+
+        <!-- 3. Abstract Animated -->
+        <a href="/animated-gradients.html" class="card-glass" style="text-decoration: none; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 280px; background: linear-gradient(145deg, rgba(20,20,24,0.9), rgba(10,10,14,0.95));">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+            <span class="badge-tag">90 Loops</span>
+            <div style="width: 14px; height: 14px; border-radius: 50%; background: #a855f7;"></div>
+          </div>
+          <div>
+            <h3 class="text-h4" style="color: #fff; margin-bottom: 0.5rem;">Abstract Animated Loops</h3>
+            <p class="text-p-sm">Hypnotic fluid moving backgrounds rendered with high-framerate WebGL.</p>
+          </div>
+        </a>
+
+        <!-- 4. AI Generated -->
+        <a href="/ai-generated.html" class="card-glass" style="text-decoration: none; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 280px; background: linear-gradient(145deg, rgba(20,20,24,0.9), rgba(10,10,14,0.95));">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+            <span class="badge-tag">556 Backgrounds</span>
+            <div style="width: 14px; height: 14px; border-radius: 50%; background: #f43f5e;"></div>
+          </div>
+          <div>
+            <h3 class="text-h4" style="color: #fff; margin-bottom: 0.5rem;">AI Generated Backgrounds</h3>
+            <p class="text-p-sm">Abstract generative depth visuals up to 12K resolution for high-end brands.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Shader Gradient Tool Section -->
+  <section style="padding: 3rem 0 5rem;">
+    <div class="container">
+      <div style="text-align: center; max-width: 680px; margin: 0 auto 2.5rem;">
+        <span class="badge-pill">INTERACTIVE TOOL</span>
+        <h2 class="text-h2" style="margin-top: 0.75rem;">Meet Grainient Shader Gradient Tool</h2>
+        <p class="text-p-lead">
+          Design and synthesize procedural shader backgrounds directly inside your browser. Tweak color nodes, wave turbulence, and grain in real-time.
+        </p>
+      </div>
+
+      <!-- Live Shader Canvas Root -->
+      <div id="shader-studio-root"></div>
+    </div>
+  </section>
+
+  <!-- Curated Gradients Library Grid -->
+  <section style="padding: 4rem 0 5rem; border-top: 1px solid var(--border-subtle);">
+    <div class="container">
+      <div style="display: flex; flex-direction: column; md:flex-row; justify-content: space-between; align-items: flex-start; gap: 1.5rem; margin-bottom: 2rem;">
+        <div>
+          <h2 class="text-h2">Curated Gradients Library</h2>
+          <p class="text-p-sm">Click any gradient to inspect color stops, copy CSS, or download high-res files.</p>
+        </div>
+
+        <!-- Search Input -->
+        <div style="width: 100%; max-width: 320px;">
+          <input 
+            type="text" 
+            id="gradient-search" 
+            placeholder="Search by name or color..." 
+            style="width: 100%; padding: 0.6rem 1rem; border-radius: var(--radius-full); background: var(--bg-card); border: 1px solid var(--border-subtle); color: #fff; font-size: 0.875rem;" 
+          />
+        </div>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2.5rem;">
+        <button class="btn btn-primary btn-sm cat-filter-btn" data-category="all">All (1000+)</button>
+        <button class="btn btn-secondary btn-sm cat-filter-btn" data-category="noisy-grainy">Noisy / Grainy (387)</button>
+        <button class="btn btn-secondary btn-sm cat-filter-btn" data-category="smooth-blend">Smooth Blend (466)</button>
+        <button class="btn btn-secondary btn-sm cat-filter-btn" data-category="animated">Abstract Animated (90)</button>
+        <button class="btn btn-secondary btn-sm cat-filter-btn" data-category="ai-generated">AI Generated (556)</button>
+      </div>
+
+      <!-- Grid Cards -->
+      <div id="curated-grid" class="grid-cards"></div>
+    </div>
+  </section>
+
+  <!-- Pricing Preview Section -->
+  <section style="padding: 5rem 0; border-top: 1px solid var(--border-subtle); background: var(--bg-secondary);">
+    <div class="container">
+      <div style="text-align: center; max-width: 600px; margin: 0 auto 3.5rem;">
+        <span class="badge-pill">PRICING TIERS</span>
+        <h2 class="text-h2" style="margin-top: 0.75rem;">Infinite Gradients, Unlimited Access!</h2>
+        <p class="text-p-lead">Pay once for lifetime updates or subscribe monthly. 100% royalty-free commercial licenses.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 1000px; margin: 0 auto;">
+        
+        <!-- Starter Plan -->
+        <div class="card-glass" style="padding: 2rem; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <span class="badge-tag">Freebie Starter</span>
+            <div style="display: flex; align-items: baseline; gap: 0.25rem; margin: 1rem 0;">
+              <span class="text-h2" style="margin: 0;">$0</span>
+              <span class="text-p-sm">/ forever</span>
+            </div>
+            <p class="text-p-sm">Sample pack of 30+ basic gradients for personal experiments.</p>
+            <ul style="list-style: none; margin: 1.5rem 0; display: flex; flex-direction: column; gap: 0.75rem;" class="text-p-sm">
+              <li>&check; 30 High-res static PNGs</li>
+              <li>&check; Standard CSS Copy</li>
+              <li style="color: var(--text-muted);">&cross; Shader Tool Pro Presets</li>
+              <li style="color: var(--text-muted);">&cross; Commercial Client License</li>
+            </ul>
+          </div>
+          <a href="/collections.html" class="btn btn-secondary btn-md" style="width: 100%;">Browse Freebies</a>
+        </div>
+
+        <!-- Pro Pass (Featured) -->
+        <div class="card-glass" style="padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; border-color: var(--color-brand-primary); box-shadow: var(--shadow-brand); position: relative;">
+          <div style="position: absolute; top: -12px; right: 2rem;">
+            <span class="badge-pill" style="background: var(--color-brand-primary); color: #000; font-weight: 700;">POPULAR CHOICE</span>
+          </div>
+          <div>
+            <span class="badge-tag">Lifetime Pro Access</span>
+            <div style="display: flex; align-items: baseline; gap: 0.25rem; margin: 1rem 0;">
+              <span class="text-h2" style="margin: 0; color: var(--color-brand-primary);">$59</span>
+              <span class="text-p-sm">/ one-time</span>
+            </div>
+            <p class="text-p-sm">Full unlimited access to every current and future gradient pack forever.</p>
+            <ul style="list-style: none; margin: 1.5rem 0; display: flex; flex-direction: column; gap: 0.75rem;" class="text-p-sm">
+              <li>&check; Full 1,000+ Library (All 4 Collections)</li>
+              <li>&check; 4K, 8K &amp; 12K Ultra HD Downloads</li>
+              <li>&check; Full Grainient Shader Tool Pro</li>
+              <li>&check; Unlimited Commercial Licensing</li>
+              <li>&check; Lifetime Drops &amp; Figma Plugin</li>
+            </ul>
+          </div>
+          <a href="/pricing.html" class="btn btn-primary btn-md" style="width: 100%;">Get Lifetime Pro</a>
+        </div>
+
+        <!-- Studio / Team Pass -->
+        <div class="card-glass" style="padding: 2rem; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <span class="badge-tag">Studio &amp; Agency</span>
+            <div style="display: flex; align-items: baseline; gap: 0.25rem; margin: 1rem 0;">
+              <span class="text-h2" style="margin: 0;">$299</span>
+              <span class="text-p-sm">/ lifetime</span>
+            </div>
+            <p class="text-p-sm">Complete team license for design studios, agencies, and production houses.</p>
+            <ul style="list-style: none; margin: 1.5rem 0; display: flex; flex-direction: column; gap: 0.75rem;" class="text-p-sm">
+              <li>&check; Up to 10 Team Members</li>
+              <li>&check; Raw Source Vector &amp; GLSL Files</li>
+              <li>&check; Priority Custom Pack Requests</li>
+              <li>&check; Unlimited Client Projects</li>
+            </ul>
+          </div>
+          <a href="/pricing.html" class="btn btn-secondary btn-md" style="width: 100%;">Get Studio Pass</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section style="padding: 5rem 0;">
+    <div class="container">
+      <div style="text-align: center; max-width: 600px; margin: 0 auto 3rem;">
+        <span class="badge-pill">COMMUNITY</span>
+        <h2 class="text-h2" style="margin-top: 0.75rem;">Loved by Creatives All Around the Globe</h2>
+      </div>
+
+      <div class="grid-cards">
+        <div class="card-glass" style="padding: 1.75rem;">
+          <p class="text-p-body" style="font-style: italic; margin-bottom: 1rem;">
+            &ldquo;Grainient completely revamped our hero section conversion rate. The noisy gradients have a depth you just can't get with standard CSS.&rdquo;
+          </p>
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <div style="width: 36px; height: 36px; border-radius: 50%; background: #38bdf8;"></div>
+            <div>
+              <div style="font-weight: 600; font-size: 0.9rem;">Alex Rivera</div>
+              <div class="text-p-caption">Lead Designer @ Veloce Studio</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-glass" style="padding: 1.75rem;">
+          <p class="text-p-body" style="font-style: italic; margin-bottom: 1rem;">
+            &ldquo;The real-time Shader Tool alone is worth 10x the price of the Pro pass. I generate bespoke mesh gradients for all our client brands in seconds.&rdquo;
+          </p>
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <div style="width: 36px; height: 36px; border-radius: 50%; background: #c2f13c;"></div>
+            <div>
+              <div style="font-weight: 600; font-size: 0.9rem;">Marcus Zhao</div>
+              <div class="text-p-caption">Creative Developer @ NovaWeb</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-glass" style="padding: 1.75rem;">
+          <p class="text-p-body" style="font-style: italic; margin-bottom: 1rem;">
+            &ldquo;Super clean code copy and stunning 8K downloads. Grainient is now a permanent fixture in our team's creative toolkit.&rdquo;
+          </p>
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <div style="width: 36px; height: 36px; border-radius: 50%; background: #ec4899;"></div>
+            <div>
+              <div style="font-weight: 600; font-size: 0.9rem;">Elena Rostova</div>
+              <div class="text-p-caption">Product Designer @ FinTech UI</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section style="padding: 5rem 0; border-top: 1px solid var(--border-subtle); background: var(--bg-secondary);">
+    <div class="container" style="max-width: 800px;">
+      <div style="text-align: center; margin-bottom: 3rem;">
+        <span class="badge-pill">FAQ</span>
+        <h2 class="text-h2" style="margin-top: 0.75rem;">Frequently Asked Questions</h2>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 1rem;">
+        <div class="card-glass faq-item" style="padding: 1.25rem 1.5rem; cursor: pointer;">
+          <div class="faq-trigger" style="display: flex; justify-content: space-between; align-items: center;">
+            <h3 class="text-h5" style="margin: 0; font-size: 1.05rem;">What asset formats and resolutions are included?</h3>
+            <span class="faq-icon" style="transition: transform 0.2s ease;">&darr;</span>
+          </div>
+          <div class="faq-answer" style="display: none; margin-top: 1rem; border-top: 1px solid var(--border-subtle); padding-top: 1rem;">
+            <p class="text-p-sm">
+              All collections include raw CSS linear, radial, and conic syntax, SVG noise filter code, 4K and 8K uncompressed PNGs, high-framerate MP4/WebM video background loops, and interactive GLSL WebGL shader code snippets.
+            </p>
+          </div>
+        </div>
+
+        <div class="card-glass faq-item" style="padding: 1.25rem 1.5rem; cursor: pointer;">
+          <div class="faq-trigger" style="display: flex; justify-content: space-between; align-items: center;">
+            <h3 class="text-h5" style="margin: 0; font-size: 1.05rem;">Can I use these gradients in commercial client projects?</h3>
+            <span class="faq-icon" style="transition: transform 0.2s ease;">&darr;</span>
+          </div>
+          <div class="faq-answer" style="display: none; margin-top: 1rem; border-top: 1px solid var(--border-subtle); padding-top: 1rem;">
+            <p class="text-p-sm">
+              Yes, absolutely. Both Pro Pass and Studio tiers come with unlimited commercial licenses. You can use them in client websites, mobile apps, SaaS products, printed media, and commercial templates.
+            </p>
+          </div>
+        </div>
+
+        <div class="card-glass faq-item" style="padding: 1.25rem 1.5rem; cursor: pointer;">
+          <div class="faq-trigger" style="display: flex; justify-content: space-between; align-items: center;">
+            <h3 class="text-h5" style="margin: 0; font-size: 1.05rem;">How does the Real-Time Shader Tool work?</h3>
+            <span class="faq-icon" style="transition: transform 0.2s ease;">&darr;</span>
+          </div>
+          <div class="faq-answer" style="display: none; margin-top: 1rem; border-top: 1px solid var(--border-subtle); padding-top: 1rem;">
+            <p class="text-p-sm">
+              The Shader Tool runs entirely on your client machine using HTML5 Canvas and mathematical wave harmonics with Delta Time (dt) interpolation. It doesn't require any backend servers and exports instant CSS or high-resolution canvas snapshots.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section style="padding: 5rem 0; border-top: 1px solid var(--border-subtle);">
+    <div class="container" style="max-width: 640px; text-align: center;">
+      <span class="badge-pill">UPDATES</span>
+      <h2 class="text-h2" style="margin-top: 0.75rem;">Be Notified When New Drops Land</h2>
+      <p class="text-p-lead" style="margin-bottom: 2rem;">
+        We publish weekly new gradient packs, shader presets, and design resources. No spam, unsubscribe anytime.
+      </p>
+
+      <form id="newsletter-form" style="display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center;">
+        <input 
+          type="email" 
+          placeholder="Enter your work email address..." 
+          required 
+          style="flex: 1; min-width: 260px; padding: 0.75rem 1.25rem; border-radius: var(--radius-full); background: var(--bg-card); border: 1px solid var(--border-subtle); color: #fff; font-size: 0.9rem;" 
+        />
+        <button type="submit" class="btn btn-primary btn-md">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer-root"></div>
+
+  <script type="module">
+    import { initHomePage } from './src/pages/home.ts';
+    initHomePage();
+  </script>
+</body>
+</html>

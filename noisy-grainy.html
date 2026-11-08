@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Noisy / Grainy Gradients - 387+ Assets | Grainient</title>
+  <link rel="icon" type="image/svg+xml" href="/public/favicon.svg" />
+  <link rel="stylesheet" href="/src/styles/tokens.css" />
+  <link rel="stylesheet" href="/src/styles/global.css" />
+</head>
+<body>
+  <div id="navbar-root"></div>
+
+  <section style="padding: 4rem 0 2rem; border-bottom: 1px solid var(--border-subtle); background: var(--bg-secondary);">
+    <div class="container">
+      <div style="max-width: 680px;">
+        <span class="badge-pill">COLLECTION &bull; 387 ASSETS</span>
+        <h1 class="text-h2" style="margin: 0.75rem 0 0.5rem;">Noisy &amp; Grainy Gradients</h1>
+        <p class="text-p-lead">
+          Tactile analogue film grain combined with rich harmonic multi-stop gradients. Perfect for modern SaaS landing pages, posters, and web app heros.
+        </p>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem;">
+        <input 
+          type="text" 
+          id="gallery-search" 
+          placeholder="Filter within Noisy / Grainy..." 
+          style="padding: 0.5rem 1rem; border-radius: var(--radius-full); background: var(--bg-card); border: 1px solid var(--border-subtle); color: #fff; font-size: 0.85rem; width: 280px;" 
+        />
+        <select id="gallery-sort" style="padding: 0.5rem 1rem; border-radius: var(--radius-full); background: var(--bg-card); border: 1px solid var(--border-subtle); color: #fff; font-size: 0.85rem;">
+          <option value="featured">Featured First</option>
+          <option value="name">Alphabetical</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <main style="padding: 3.5rem 0 6rem;">
+    <div class="container">
+      <div id="collections-grid" class="grid-cards"></div>
+    </div>
+  </main>
+
+  <div id="footer-root"></div>
+
+  <script type="module">
+    import { initCollectionsPage } from './src/pages/collectionsPage.ts';
+    initCollectionsPage('noisy-grainy');
+  </script>
+</body>
+</html>
